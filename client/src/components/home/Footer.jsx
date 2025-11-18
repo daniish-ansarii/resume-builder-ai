@@ -79,23 +79,6 @@ const Footer = () => {
           </ul>
         </motion.div>
 
-        {/* Company */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0 },
-          }}
-        >
-          <h4 className="font-semibold mb-3 text-gray-800">Company</h4>
-          <ul className="space-y-2">
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Partners</li>
-            <li>Blog</li>
-          </ul>
-        </motion.div>
-      </motion.div>
-
       {/* RIGHT SECTION */}
       <motion.div
         className="
