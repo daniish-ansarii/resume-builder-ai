@@ -5,109 +5,86 @@ const Footer = () => {
   return (
     <>
       <motion.footer
-        className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-500 bg-gradient-to-r from-white via-green-200/60 to-white mt-40"
+        className="
+          w-full 
+          flex flex-col md:flex-row 
+          justify-between 
+          items-start md:items-center
+          gap-12 md:gap-20 
+          py-16 px-6 md:px-16 lg:px-24 xl:px-32
+          text-[14px] text-gray-600 
+          bg-gradient-to-r from-white via-green-200/60 to-white 
+          mt-32
+        "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         {/* LEFT SECTION */}
-        <motion.div
-          className="flex flex-wrap items-start gap-10 md:gap-[60px] xl:gap-[140px]"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            show: {
-              transition: { staggerChildren: 0.15 },
-            },
-          }}
-        >
+        <div className="w-full flex flex-wrap gap-10 justify-center md:justify-start">
           {/* Logo */}
-          <motion.a
-            href="#"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
-            <img src="/logo.svg" alt="logo" className="h-11 w-auto" />
-          </motion.a>
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
+            <img src="/logo.svg" className="h-12 w-auto" />
+          </div>
 
-          {/* Product */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
-            <p className="text-slate-800 font-semibold">Product</p>
-            <ul className="mt-2 space-y-2">
-              <li><a href="/" className="hover:text-green-600 transition">Home</a></li>
-              <li><a href="/" className="hover:text-green-600 transition">Support</a></li>
-              <li><a href="/" className="hover:text-green-600 transition">Pricing</a></li>
-              <li><a href="/" className="hover:text-green-600 transition">Affiliate</a></li>
-            </ul>
-          </motion.div>
+          {/* Link Groups */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 w-full md:w-auto text-center md:text-left">
 
-          {/* Resources */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
-            <p className="text-slate-800 font-semibold">Resources</p>
-            <ul className="mt-2 space-y-2">
-              <li><a href="/" className="hover:text-green-600 transition">Company</a></li>
-              <li><a href="/" className="hover:text-green-600 transition">Blogs</a></li>
-              <li><a href="/" className="hover:text-green-600 transition">Community</a></li>
-              <li>
-                <a href="/" className="hover:text-green-600 transition">
-                  Careers
-                  <span className="text-xs text-white bg-green-600 rounded-md ml-2 px-2 py-1">
-                    We’re hiring!
-                  </span>
-                </a>
-              </li>
-              <li><a href="/" className="hover:text-green-600 transition">About</a></li>
-            </ul>
-          </motion.div>
+            {/* Product */}
+            <div>
+              <h3 className="text-slate-800 font-semibold">Product</h3>
+              <ul className="mt-2 space-y-2">
+                <li><a href="/" className="hover:text-green-600">Home</a></li>
+                <li><a href="/" className="hover:text-green-600">Support</a></li>
+                <li><a href="/" className="hover:text-green-600">Pricing</a></li>
+                <li><a href="/" className="hover:text-green-600">Affiliate</a></li>
+              </ul>
+            </div>
 
-          {/* Legal */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
-            <p className="text-slate-800 font-semibold">Legal</p>
-            <ul className="mt-2 space-y-2">
-              <li><a href="/" className="hover:text-green-600 transition">Privacy</a></li>
-              <li><a href="/" className="hover:text-green-600 transition">Terms</a></li>
-            </ul>
-          </motion.div>
-        </motion.div>
+            {/* Resources */}
+            <div>
+              <h3 className="text-slate-800 font-semibold">Resources</h3>
+              <ul className="mt-2 space-y-2">
+                <li><a href="/" className="hover:text-green-600">Company</a></li>
+                <li><a href="/" className="hover:text-green-600">Blogs</a></li>
+                <li><a href="/" className="hover:text-green-600">Community</a></li>
+                <li>
+                  <a href="/" className="hover:text-green-600">
+                    Careers
+                    <span className="text-xs text-white bg-green-600 rounded-md ml-2 px-2 py-1">
+                      Hiring!
+                    </span>
+                  </a>
+                </li>
+                <li><a href="/" className="hover:text-green-600">About</a></li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h3 className="text-slate-800 font-semibold">Legal</h3>
+              <ul className="mt-2 space-y-2">
+                <li><a href="/" className="hover:text-green-600">Privacy</a></li>
+                <li><a href="/" className="hover:text-green-600">Terms</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
 
         {/* RIGHT SECTION */}
-        <motion.div
-          className="flex flex-col max-md:items-center max-md:text-center gap-2 items-end"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.7 }}
-          viewport={{ once: true }}
-        >
+        <div className="w-full md:w-auto flex flex-col items-center md:items-end text-center md:text-right">
           <p className="max-w-60">
             Making job hunting easier—helping every user build a resume with impact.
           </p>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 mt-3">
+          <div className="flex items-center gap-4 mt-4">
             {[
               {
                 href: "https://dribbble.com/",
-                icon: (
+                svg: (
                   <>
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
@@ -118,7 +95,7 @@ const Footer = () => {
               },
               {
                 href: "https://www.linkedin.com/in/daniish-ansarii/",
-                icon: (
+                svg: (
                   <>
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect width="4" height="12" x="2" y="9"></rect>
@@ -128,7 +105,7 @@ const Footer = () => {
               },
               {
                 href: "https://x.com/",
-                icon: (
+                svg: (
                   <>
                     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                   </>
@@ -136,20 +113,19 @@ const Footer = () => {
               },
               {
                 href: "https://www.youtube.com/",
-                icon: (
+                svg: (
                   <>
                     <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
                     <path d="m10 15 5-3-5-3z"></path>
                   </>
                 ),
               },
-            ].map((item, i) => (
+            ].map((item, idx) => (
               <motion.a
-                key={i}
+                key={idx}
                 href={item.href}
                 target="_blank"
-                rel="noreferrer"
-                className="hover:text-green-500"
+                className="hover:text-green-600"
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -162,32 +138,21 @@ const Footer = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="size-5"
                 >
-                  {item.icon}
+                  {item.svg}
                 </svg>
               </motion.a>
             ))}
           </div>
 
-          <motion.p
-            className="mt-3 text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            © 2025 Resume Builder
-          </motion.p>
-        </motion.div>
+          <p className="text-sm mt-4">© 2025 Resume Builder</p>
+        </div>
       </motion.footer>
 
-      {/* GLOBAL FONT */}
+      {/* FONT */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-        * {
-          font-family: 'Poppins', sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
       `}</style>
     </>
   );
