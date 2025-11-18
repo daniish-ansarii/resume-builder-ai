@@ -9,6 +9,14 @@ import aiRouter from "./routes/aiRoutes.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://resume-builder-ai-zeta.vercel.app"
+  ],
+  credentials: true
+}));
+
 // Database connection
 await connectDB()
 
