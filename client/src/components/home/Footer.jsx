@@ -126,22 +126,6 @@ const Footer = () => {
           </button>
         </div>
 
-        {/* Social Icons */}
-        <div className="flex items-center justify-center lg:justify-end gap-4 mt-3 flex-wrap">
-          <a href="#">
-            <img src="/icons/facebook.svg" className="h-5" />
-          </a>
-          <a href="#">
-            <img src="/icons/twitter.svg" className="h-5" />
-          </a>
-          <a href="#">
-            <img src="/icons/instagram.svg" className="h-5" />
-          </a>
-          <a href="#">
-            <img src="/icons/linkedin.svg" className="h-5" />
-          </a>
-        </div>
-
         <p className="text-xs text-gray-500 mt-4">
           © {new Date().getFullYear()} ResumeBuilderAI — All Rights Reserved
         </p>
