@@ -1,119 +1,125 @@
-import { motion } from "framer-motion";
+import React from "react";
 
 const Footer = () => {
   return (
-    <motion.footer
-      className="
-        w-full
-        flex flex-col lg:flex-row
-        justify-between
-        items-start
-        gap-14 lg:gap-20
-        py-12 px-6 md:px-12 lg:px-20
-        text-[13px] text-gray-600
-        bg-gradient-to-r from-white via-green-200/60 to-white
-        mt-24
-      "
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      {/* LEFT SECTION */}
-      <motion.div
-        className="
-          w-full
-          grid grid-cols-2 sm:grid-cols-3
-          gap-10
-          text-center sm:text-left
-        "
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: { transition: { staggerChildren: 0.15 } },
-        }}
-      >
-        {/* Logo */}
-        <motion.a
-          href="#"
-          className="col-span-2 sm:col-span-1 flex justify-center sm:justify-start"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0 },
-          }}
-        >
-          <img src="/logo.svg" alt="logo" className="h-10 w-auto" />
-        </motion.a>
+    <>
+      <footer className="w-full bg-gradient-to-r from-white via-green-200/60 to-white mt-40 px-6 md:px-16 lg:px-24 xl:px-32 py-16 text-[13px] text-gray-500 flex flex-col gap-16">
 
-        {/* Features */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0 },
-          }}
-        >
-          <h4 className="font-semibold mb-3 text-gray-800">Features</h4>
-          <ul className="space-y-2">
-            <li>AI Resume Builder</li>
-            <li>Templates</li>
-            <li>Cover Letters</li>
-            <li>Portfolio Tools</li>
-          </ul>
-        </motion.div>
+        {/* TOP SECTION */}
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-16">
+          
+          {/* Logo */}
+          <div className="col-span-2 sm:col-span-1 flex justify-center sm:justify-start">
+            <a href="#">
+              <img src="/logo.svg" alt="logo" className="h-11 w-auto" />
+            </a>
+          </div>
 
-        {/* Support */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0 },
-          }}
-        >
-          <h4 className="font-semibold mb-3 text-gray-800">Support</h4>
-          <ul className="space-y-2">
-            <li>Contact Us</li>
-            <li>Help Center</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
-          </ul>
-        </motion.div>
+          {/* Product */}
+          <div>
+            <p className="text-slate-800 font-semibold mb-3">Product</p>
+            <ul className="space-y-2">
+              <li><a href="/" className="hover:text-green-600">Home</a></li>
+              <li><a href="/" className="hover:text-green-600">Support</a></li>
+              <li><a href="/" className="hover:text-green-600">Pricing</a></li>
+              <li><a href="/" className="hover:text-green-600">Affiliate</a></li>
+            </ul>
+          </div>
 
-      {/* RIGHT SECTION */}
-      <motion.div
-        className="
-          w-full
-          flex flex-col items-center lg:items-end
-          text-center lg:text-right
-          gap-3
-        "
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.7 }}
-        viewport={{ once: true }}
-      >
-        <h4 className="font-semibold text-gray-800">Stay Updated</h4>
-        <p className="max-w-xs">
-          Subscribe to get updates on new templates, AI features, and job tips.
-        </p>
+          {/* Resources */}
+          <div>
+            <p className="text-slate-800 font-semibold mb-3">Resources</p>
+            <ul className="space-y-2">
+              <li><a href="/" className="hover:text-green-600">Company</a></li>
+              <li><a href="/" className="hover:text-green-600">Blogs</a></li>
+              <li><a href="/" className="hover:text-green-600">Community</a></li>
+              <li>
+                <a href="/" className="hover:text-green-600">
+                  Careers
+                  <span className="text-xs text-white bg-green-600 rounded-md ml-2 px-2 py-0.5">
+                    We’re hiring!
+                  </span>
+                </a>
+              </li>
+              <li><a href="/" className="hover:text-green-600">About</a></li>
+            </ul>
+          </div>
 
-        {/* Email */}
-        <div className="flex w-full max-w-xs gap-2 mt-2">
-          <input
-            type="email"
-            className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm"
-            placeholder="Enter your email"
-          />
-          <button className="px-4 py-2 bg-black text-white rounded-md text-sm">
-            Join
-          </button>
+          {/* Legal */}
+          <div>
+            <p className="text-slate-800 font-semibold mb-3">Legal</p>
+            <ul className="space-y-2">
+              <li><a href="/" className="hover:text-green-600">Privacy</a></li>
+              <li><a href="/" className="hover:text-green-600">Terms</a></li>
+            </ul>
+          </div>
         </div>
 
-        <p className="text-xs text-gray-500 mt-4">
-          © {new Date().getFullYear()} ResumeBuilderAI — All Rights Reserved
-        </p>
-      </motion.div>
-    </motion.footer>
+        {/* BOTTOM SECTION */}
+        <div className="w-full flex flex-col items-center lg:items-end text-center lg:text-right gap-3">
+          
+          <p className="max-w-64">
+            Making every customer feel valued—no matter the size of your audience.
+          </p>
+
+          {/* SOCIAL ICONS */}
+          <div className="flex items-center justify-center lg:justify-end gap-4 mt-3 flex-wrap">
+            {/* Dribbble */}
+            <a href="https://dribbble.com/" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="none" stroke="currentColor" strokeWidth="2"
+                className="size-5 hover:text-green-500">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
+              </svg>
+            </a>
+
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/in/daniish-ansarii/"
+              target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="none" stroke="currentColor" strokeWidth="2"
+                className="size-5 hover:text-green-500">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2..."></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            {/* X (Twitter) */}
+            <a href="https://x.com/" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="none" stroke="currentColor" strokeWidth="2"
+                className="size-5 hover:text-green-500">
+                <path d="M22 4s-.7 2.1-2 3.4..."></path>
+              </svg>
+            </a>
+
+            {/* YouTube */}
+            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="none" stroke="currentColor" strokeWidth="2"
+                className="size-6 hover:text-green-500">
+                <path d="M2.5 17a24.12 24.12 0 0 1 0-10..."></path>
+                <path d="m10 15 5-3-5-3z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <p className="mt-3 text-center">© 2025 Resume Builder</p>
+        </div>
+      </footer>
+
+      {/* GLOBAL POPPINS FONT */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+          * { font-family: 'Poppins', sans-serif; }
+        `}
+      </style>
+    </>
   );
 };
 
