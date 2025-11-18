@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm flex items-center justify-between py-4 px-6 md:px-16 lg:px-24 xl:px-40"
         >
-          <a href="https://prebuiltui.com">
+          <a href="https://resume-builder-ai-zeta.vercel.app/">
             <img src="/logo.svg" className="h-11 w-auto" />
           </a>
 
@@ -140,7 +140,7 @@ export default function Hero() {
             className="flex items-center gap-4"
           >
             <Link
-              to="/app"
+              to="/"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-9 h-12 flex items-center"
             >
               Get started
