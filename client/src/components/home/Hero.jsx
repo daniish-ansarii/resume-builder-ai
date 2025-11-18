@@ -93,7 +93,7 @@ export default function Hero() {
                     "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
                     "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
                     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200",
-                    "https://randomuser.me/api/portraits/men/75.jpg",
+                    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200",
                   ][i]}
                 />
               ))}
