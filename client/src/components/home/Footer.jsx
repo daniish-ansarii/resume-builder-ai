@@ -1,70 +1,153 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { Facebook, Twitter, Instagram, Linkedin, } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-100 mt-32 px-6 md:px-16 lg:px-24 py-14 text-sm text-gray-600">
-
-      {/* TOP */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
-
+    <motion.footer
+      className="
+        w-full
+        flex flex-col lg:flex-row
+        justify-between
+        items-start
+        gap-14 lg:gap-20
+        py-12 px-6 md:px-12 lg:px-20
+        text-[13px] text-gray-600
+        bg-gradient-to-r from-white via-green-200/60 to-white
+        mt-24
+      "
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      {/* LEFT SECTION */}
+      <motion.div
+        className="
+          w-full
+          grid grid-cols-2 sm:grid-cols-3
+          gap-10
+          text-center sm:text-left
+        "
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: { transition: { staggerChildren: 0.15 } },
+        }}
+      >
         {/* Logo */}
-        <div className="col-span-2 sm:col-span-1">
-          <img src="/logo.svg" alt="logo" className="h-12 w-auto" />
-        </div>
+        <motion.a
+          href="#"
+          className="col-span-2 sm:col-span-1 flex justify-center sm:justify-start"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            show: { opacity: 1, y: 0 },
+          }}
+        >
+          <img src="/logo.svg" alt="logo" className="h-10 w-auto" />
+        </motion.a>
 
-        {/* Product */}
-        <div>
-          <p className="text-gray-900 font-semibold mb-3">Product</p>
+        {/* Features */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            show: { opacity: 1, y: 0 },
+          }}
+        >
+          <h4 className="font-semibold mb-3 text-gray-800">Features</h4>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-black">Home</a></li>
-            <li><a href="#" className="hover:text-black">Support</a></li>
-            <li><a href="#" className="hover:text-black">Pricing</a></li>
-            <li><a href="#" className="hover:text-black">Affiliate</a></li>
+            <li>AI Resume Builder</li>
+            <li>Templates</li>
+            <li>Cover Letters</li>
+            <li>Portfolio Tools</li>
           </ul>
-        </div>
+        </motion.div>
 
-        {/* Resources */}
-        <div>
-          <p className="text-gray-900 font-semibold mb-3">Resources</p>
+        {/* Support */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            show: { opacity: 1, y: 0 },
+          }}
+        >
+          <h4 className="font-semibold mb-3 text-gray-800">Support</h4>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-black">Company</a></li>
-            <li><a href="#" className="hover:text-black">Blogs</a></li>
-            <li><a href="#" className="hover:text-black">Community</a></li>
-            <li><a href="#" className="hover:text-black">Careers</a></li>
+            <li>Contact Us</li>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
           </ul>
-        </div>
+        </motion.div>
 
-        {/* Legal */}
-        <div>
-          <p className="text-gray-900 font-semibold mb-3">Legal</p>
+        {/* Company */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            show: { opacity: 1, y: 0 },
+          }}
+        >
+          <h4 className="font-semibold mb-3 text-gray-800">Company</h4>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-black">Privacy</a></li>
-            <li><a href="#" className="hover:text-black">Terms</a></li>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Partners</li>
+            <li>Blog</li>
           </ul>
+        </motion.div>
+      </motion.div>
+
+      {/* RIGHT SECTION */}
+      <motion.div
+        className="
+          w-full
+          flex flex-col items-center lg:items-end
+          text-center lg:text-right
+          gap-3
+        "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.7 }}
+        viewport={{ once: true }}
+      >
+        <h4 className="font-semibold text-gray-800">Stay Updated</h4>
+        <p className="max-w-xs">
+          Subscribe to get updates on new templates, AI features, and job tips.
+        </p>
+
+        {/* Email */}
+        <div className="flex w-full max-w-xs gap-2 mt-2">
+          <input
+            type="email"
+            className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm"
+            placeholder="Enter your email"
+          />
+          <button className="px-4 py-2 bg-black text-white rounded-md text-sm">
+            Join
+          </button>
         </div>
-      </div>
 
-      {/* BOTTOM */}
-      <div className="w-full mt-12 flex flex-col items-center gap-3">
+        {/* Social Icons - Lucide React */}
+        <div className="flex items-center justify-center lg:justify-end gap-4 mt-3 flex-wrap">
+          <a href="#" className="hover:text-black transition">
+            <Facebook size={20} />
+          </a>
+          <a href="#" className="hover:text-black transition">
+            <Twitter size={20} />
+          </a>
+          <a href="#" className="hover:text-black transition">
+            <Instagram size={20} />
+          </a>
+          <a href="#" className="hover:text-black transition">
+            <Linkedin size={20} />
+          </a>
+        </div>
 
-        <p className="text-center text-gray-700">Join our community</p>
-
-        {/* Join Button */}
-        <button className="bg-black text-white px-6 py-2 rounded-md hover:opacity-80">
-          Join
-        </button>
-
-        <p className="text-center mt-4">© 2025 Resume Builder</p>
-      </div>
-
-      {/* Global Font */}
-      <style>
-        {`
-          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-          * { font-family: 'Poppins', sans-serif; }
-        `}
-      </style>
-    </footer>
+        <p className="text-xs text-gray-500 mt-4">
+          © {new Date().getFullYear()} ResumeBuilderAI — All Rights Reserved
+        </p>
+      </motion.div>
+    </motion.footer>
   );
 };
 
