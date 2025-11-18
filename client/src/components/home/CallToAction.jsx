@@ -32,7 +32,7 @@ const CallToAction = () => {
 
         {/* Button */}
         <motion.a
-          href="/app"
+          href="/"
           className="flex items-center gap-2 rounded py-3 px-8 bg-green-600 hover:bg-green-700 transition text-white"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.97 }}
