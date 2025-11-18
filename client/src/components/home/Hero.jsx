@@ -140,7 +140,7 @@ export default function Hero() {
             className="flex items-center gap-4"
           >
             <Link
-              to="/"
+              to="#"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-9 h-12 flex items-center"
             >
               Get started
