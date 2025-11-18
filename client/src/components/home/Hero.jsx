@@ -7,6 +7,9 @@ export default function Hero() {
   const { user } = useSelector((state) => state.auth);
   const [menuOpen, setMenuOpen] = React.useState(false);
 
+  // CTA path: if user is signed in go to dashboard, otherwise open register flow
+  const ctaPath = user ? '/app' : '/app?state=register';
+
   const logos = [
     "https://saasly.prebuiltui.com/assets/companies-logo/instagram.svg",
     "https://saasly.prebuiltui.com/assets/companies-logo/framer.svg",
@@ -93,7 +96,7 @@ export default function Hero() {
                     "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
                     "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
                     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200",
-                    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200",
+                    "https://randomuser.me/api/portraits/men/75.jpg",
                   ][i]}
                 />
               ))}
@@ -140,7 +143,7 @@ export default function Hero() {
             className="flex items-center gap-4"
           >
             <Link
-              to="/"
+              to={ctaPath}
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-9 h-12 flex items-center"
             >
               Get started
@@ -176,3 +179,4 @@ export default function Hero() {
     </>
   );
 }
+
