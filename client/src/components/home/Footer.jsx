@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Instagram, Linkedin, } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -80,21 +80,7 @@ const Footer = () => {
           </ul>
         </motion.div>
 
-        {/* Company */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0 },
-          }}
-        >
-          <h4 className="font-semibold mb-3 text-gray-800">Company</h4>
-          <ul className="space-y-2">
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Partners</li>
-            <li>Blog</li>
-          </ul>
-        </motion.div>
+        {/* Company — REMOVED */}
       </motion.div>
 
       {/* RIGHT SECTION */}
@@ -127,7 +113,7 @@ const Footer = () => {
           </button>
         </div>
 
-        {/* Social Icons - Lucide React */}
+        {/* Social Icons */}
         <div className="flex items-center justify-center lg:justify-end gap-4 mt-3 flex-wrap">
           <a href="#" className="hover:text-black transition">
             <Facebook size={20} />
