@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { Check } from "lucide-react";
+
 
 export default function Hero() {
   const { user } = useSelector((state) => state.auth);
@@ -156,19 +158,25 @@ export default function Hero() {
               Try demo
             </button>
           </motion.div>
+          <div className="w-full py-4 mt-14">
+           <div className="max-w-5xl mx-auto flex items-center justify-center gap-10 text-sm text-gray-600">
+        
+            <div className="flex items-center gap-2">
+            <Check className="size-4 text-green-500" />
+            <span>No credit card</span>
+         </div>
 
-          <p className="py-6 text-slate-600 mt-14">Trusted by leading brands</p>
+         <div className="flex items-center gap-2">
+            <Check className="size-4 text-green-500" />
+            <span>30 days free trial</span>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="flex flex-wrap justify-between max-sm:justify-center gap-6 max-w-3xl w-full mx-auto"
-          >
-            {logos.map((logo, i) => (
-              <img key={i} src={logo} className="h-6 w-auto" />
-            ))}
-          </motion.div>
+          <div className="flex items-center gap-2">
+            <Check className="size-4 text-green-500" />
+            <span>Setup in 10 minutes</span>
+           </div>
+           </div>
+          </div>
         </div>
       </div>
 
@@ -179,4 +187,3 @@ export default function Hero() {
     </>
   );
 }
-
