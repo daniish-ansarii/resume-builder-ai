@@ -168,7 +168,7 @@ export default function Hero() {
 
          <div className="flex items-center gap-2">
             <Check className="size-4 text-green-500" />
-            <span>30 days free trial</span>
+            <span>Life-time free</span>
           </div>
 
           <div className="flex items-center gap-2">
