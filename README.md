@@ -281,6 +281,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-Built by **[MD DANISH]** — [GitHub](https://github.com/daniish-ansarii) · [LinkedIn](https://linkedin.com/in/daniish-ansarii) · [Portfolio](https://your-portfolio.com)
+Built by **[MD DANISH]** — [GitHub](https://github.com/daniish-ansarii) · [LinkedIn](https://linkedin.com/in/daniish-ansarii) 
 
 </div>
