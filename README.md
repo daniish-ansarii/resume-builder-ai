@@ -228,4 +228,4 @@ Once the two Vercel projects are linked to the repository, pushes to the configu
 
 ## Contact
 
-Questions or suggestions: [daniish.dev@gmail.com](mailto:daniish.dev@gmail.com).
+Questions or suggestions: [mohddanishansari092@gmail.com](mailto:mohddanishansari092@gmail.com).

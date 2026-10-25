@@ -13,7 +13,7 @@ const Footer = () => <footer id="contact" className="scroll-mt-20 border-t borde
       <a href="#templates" className="transition hover:text-green-700">Templates</a>
       <a href="#how-it-works" className="transition hover:text-green-700">How it works</a>
       <a href="#faq" className="transition hover:text-green-700">FAQ</a>
-      <a href="mailto:daniish.dev@gmail.com" className="inline-flex items-center gap-1.5 font-medium text-green-700 transition hover:text-green-800"><Mail className="size-4"/>daniish.dev@gmail.com<ArrowUpRight className="size-3.5"/></a>
+      <a href="mailto:mohddanishansari092@gmail.com" className="inline-flex items-center gap-1.5 font-medium text-green-700 transition hover:text-green-800"><Mail className="size-4"/>mohddanishansari092@gmail.com<ArrowUpRight className="size-3.5"/></a>
     </div>
   </div>
   <div className="mx-auto mt-6 max-w-6xl border-t border-slate-100 pt-4 text-xs text-slate-400">© {new Date().getFullYear()} Resume Builder AI</div>

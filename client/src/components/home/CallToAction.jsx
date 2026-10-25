@@ -13,7 +13,7 @@ const CallToAction = () => {
         <p className="mt-2 text-sm text-slate-600">Email me directly. I’d be glad to hear from you.</p>
       </div>
       <div className="flex flex-wrap gap-3">
-        <a href="mailto:daniish.dev@gmail.com?subject=Resume%20Builder%20question" className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-green-400 hover:text-green-800"><Mail className="size-4 text-green-700"/> Email Danish</a>
+        <a href="mailto:mohddanishansari092@gmail.com?subject=Resume%20Builder%20question" className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-green-400 hover:text-green-800"><Mail className="size-4 text-green-700"/> Email Danish</a>
         <Link to={user ? '/app' : '/app?state=register'} className="inline-flex items-center gap-2 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-green-600">{user ? 'Open dashboard' : 'Build a resume'}<ArrowRight className="size-4"/></Link>
       </div>
     </div>
